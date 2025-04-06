@@ -1,0 +1,32 @@
+# 忽略编译产生的文件和文件夹
+build/
+install/
+log/
+
+# 忽略虚拟环境相关的文件夹
+venv/
+env/
+.venv/
+
+# 忽略日志文件
+*.log
+
+# 忽略系统生成的文件
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# 忽略 IDE 或编辑器产生的配置文件
+.idea/
+.vscode/
+
+# 忽略 Python 缓存文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 忽略虚拟环境文件
+*.tar.gz
+*.zip
