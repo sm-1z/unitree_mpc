@@ -1,0 +1,10 @@
+#include "ocs2_ros2_msgs/msg/IndividualGains.idl"
+
+module ocs2_ros2_msgs {
+  module msg {
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::Gains_")
+    struct Gains {
+      sequence<ocs2_ros2_msgs::msg::IndividualGains> value;
+    };
+  };
+};

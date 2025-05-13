@@ -1,0 +1,11 @@
+module ocs2_ros2_msgs {
+  module msg {
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::LagrangianMetrics_")
+    struct LagrangianMetrics {
+      double time;
+      double penalty;
+      sequence<double> constraint;
+    };
+  };
+};

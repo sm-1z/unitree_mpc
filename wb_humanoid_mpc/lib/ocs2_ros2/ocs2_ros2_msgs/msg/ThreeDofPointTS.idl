@@ -1,0 +1,26 @@
+#include <geometry_msgs/msg/Vector3.idl>
+
+module ocs2_ros2_msgs {
+    module msg {
+
+        /**
+        * Minimum definition of a 3DoF base trajectory
+        *
+        */
+        @TypeCode(type="ocs2_ros2_msgs::msg::dds_::ThreeDofPointTS_")
+        struct ThreeDofPointTS {
+
+            /**
+            * The desired time to reach a point
+            *
+            */
+            double desired_time;
+
+            /**
+            * The desired point to reach
+            */
+            geometry_msgs::msg::Vector3 desired_point;
+
+        };
+    };
+};

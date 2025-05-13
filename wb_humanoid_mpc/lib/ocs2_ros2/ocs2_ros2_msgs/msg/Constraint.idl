@@ -1,0 +1,10 @@
+module ocs2_ros2_msgs {
+  module msg {
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::Constraint_")
+    struct Constraint {
+      double time;
+      sequence<double> value;
+    };
+  };
+};

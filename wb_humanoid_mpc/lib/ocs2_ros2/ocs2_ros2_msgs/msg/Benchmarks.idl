@@ -1,0 +1,11 @@
+#include "ocs2_ros2_msgs/msg/IndividualBenchmarks.idl"
+
+module ocs2_ros2_msgs {
+  module msg {
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::Benchmarks_")
+    struct Benchmarks {
+      double time;
+      sequence<ocs2_ros2_msgs::msg::IndividualBenchmarks> benchmarks;
+    };
+  };
+};

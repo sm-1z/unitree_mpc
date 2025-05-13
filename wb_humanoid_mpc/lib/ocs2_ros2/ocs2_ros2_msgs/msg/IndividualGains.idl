@@ -1,0 +1,10 @@
+module ocs2_ros2_msgs {
+  module msg {
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::IndividualGains_")
+    struct IndividualGains {
+      string<255> name;
+      sequence<double> values;
+      boolean is_active;
+    };
+  };
+};

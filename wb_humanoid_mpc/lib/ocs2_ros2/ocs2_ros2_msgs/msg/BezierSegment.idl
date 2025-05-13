@@ -1,0 +1,64 @@
+#include <geometry_msgs/msg/Vector3.idl>
+
+module ocs2_ros2_msgs {
+    module msg {
+
+        /**
+        * Minimum definition of a bezier segment
+        *
+        */
+        @TypeCode(type="ocs2_ros2_msgs::msg::dds_::BezierSegment_")
+        struct BezierSegment {
+
+            /**
+             * If true the receiver will increment the start and end time with own clock time
+             *
+             */
+            boolean use_relative_time;
+
+            /**
+             * If true the receiver will augment the control points such that they are expressed relative to world fram
+             *
+             */
+            boolean use_relative_position;
+
+            /**
+            * The dimension of each control point. For now only dimension = 2 is supported
+            *
+            */
+            uint8 dimension;
+
+            /**
+            * The time at which we want to start on the segment, ensure its compatible with member:use_relative_time
+            *
+            */
+            double start_time;
+
+            /**
+            * The time at which we want to be at the end of the segment, ensure its compatible with
+            * member:use_relative_time
+            */
+            double end_time;
+
+            /**
+            * The desired forward linear velocity to track when starting on the segment
+            *
+            */
+            double start_velocity;
+
+            /**
+            * The desired forward linear velocity to have at the end of the segment
+            *
+            */
+            double end_velocity;
+
+            /**
+            * The sequence of control points expressed in World Frame (but maybe relative to midBaseZUp Frame,
+            * see member: use_relative_position). First and last points in the sequence are anchor points. Only cubic
+            * splines are supported for now: 4 control_points.
+            */
+            sequence<geometry_msgs::msg::Vector3, 4> control_points;
+
+        };
+    };
+};

@@ -1,0 +1,49 @@
+#include <ocs2_ros2_msgs/msg/ThreeDofPointTS.idl>
+
+module ocs2_ros2_msgs {
+    module msg {
+
+        /**
+        * Minimum definition of a 3DoF base trajectory
+        *
+        */
+        @TypeCode(type="ocs2_ros2_msgs::msg::dds_::ThreeDofPath_")
+        struct ThreeDofPath {
+
+            /**
+             * If true the receiver will terminate the tracking of the trajectory
+             *
+             */
+            boolean stop_execution;
+
+
+            /**
+             * Number of seconds to wait until starting the trajectory tracking
+             *
+             */
+            double time_to_start;
+
+
+            /**
+             * If true the receiver will increment the start and end time with own clock time, otherwise  it will
+             * use ros time / controller time
+             *
+             */
+            boolean use_relative_time;
+
+            /**
+             * If true the receiver will augment the desired points such that they are expressed relative to World frame
+             *
+             */
+            boolean use_relative_position;
+
+
+            /**
+            * The sequence of desired 3DoF points and time to reach reach them (possibly relative (see above)
+            *
+            */
+            sequence<ocs2_ros2_msgs::msg::ThreeDofPointTS> points_to_reach;
+
+        };
+    };
+};

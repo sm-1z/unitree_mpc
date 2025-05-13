@@ -1,0 +1,15 @@
+module ocs2_ros2_msgs {
+  module msg {
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcPerformanceIndices_")
+    struct MpcPerformanceIndices {
+      double init_time;
+      double merit;
+      double cost;
+      double dynamics_violation_sse;
+      double equality_constraints_sse;
+      double equality_lagrangian;
+      double inequality_lagrangian;
+    };
+  };
+};

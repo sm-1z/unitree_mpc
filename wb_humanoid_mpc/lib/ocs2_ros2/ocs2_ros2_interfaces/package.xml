@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="3">
+
+  <name>ocs2_ros2_interfaces</name>
+  <version>0.0.0</version>
+  <description>The ocs2 communication interfaces to ROS</description>
+
+  <license>BSD</license>
+  <maintainer email="manuel.galliker@gmx.ch">Manuel Yves Galliker</maintainer>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>ocs2_ros2_msgs</depend>
+  <depend>ocs2_core</depend>
+  <depend>ocs2_ddp</depend>
+  <depend>ocs2_oc</depend>
+  <depend>ocs2_mpc</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>interactive_markers</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

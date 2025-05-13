@@ -1,0 +1,44 @@
+#include "ocs2_ros2_msgs/msg/ControllerData.idl"
+#include "ocs2_ros2_msgs/msg/ModeSchedule.idl"
+#include "ocs2_ros2_msgs/msg/MpcInput.idl"
+#include "ocs2_ros2_msgs/msg/MpcObservation.idl"
+#include "ocs2_ros2_msgs/msg/MpcState.idl"
+#include "ocs2_ros2_msgs/msg/MpcTargetTrajectories.idl"
+#include "ocs2_ros2_msgs/msg/MpcPerformanceIndices.idl"
+
+module ocs2_ros2_msgs {
+  module msg {
+    module MpcFlattenedController_Constants {
+      const octet CONTROLLER_UNKNOWN = 0;
+      const octet CONTROLLER_FEEDFORWARD = 1;
+      const octet CONTROLLER_LINEAR = 2;
+    };
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcFlattenedController_")
+    struct MpcFlattenedController {
+
+      long api_version;
+
+      octet controller_type;
+
+      ocs2_ros2_msgs::msg::MpcObservation init_observation;
+
+      ocs2_ros2_msgs::msg::MpcTargetTrajectories plan_target_trajectories;
+
+      sequence<ocs2_ros2_msgs::msg::MpcState> state_trajectory;
+
+      sequence<ocs2_ros2_msgs::msg::MpcInput> input_trajectory;
+
+      sequence<double> time_trajectory;
+
+      sequence<octet> post_event_indices;
+
+      ocs2_ros2_msgs::msg::ModeSchedule mode_schedule;
+
+      sequence<ocs2_ros2_msgs::msg::ControllerData> data;
+
+      ocs2_ros2_msgs::msg::MpcPerformanceIndices performance_indices;
+
+    };
+  };
+};

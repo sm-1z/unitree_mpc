@@ -1,0 +1,9 @@
+module ocs2_ros2_msgs {
+  module msg {
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcState_")    
+    struct MpcState {
+      sequence<double> value;
+    };
+  };
+};

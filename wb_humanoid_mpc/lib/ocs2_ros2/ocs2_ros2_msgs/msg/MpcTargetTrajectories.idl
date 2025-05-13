@@ -1,0 +1,16 @@
+#include "ocs2_ros2_msgs/msg/MpcInput.idl"
+#include "ocs2_ros2_msgs/msg/MpcState.idl"
+
+module ocs2_ros2_msgs {
+  module msg {
+    @TypeCode(type = "ocs2_ros2_msgs::msg::dds_::MpcTargetTrajectories_") struct MpcTargetTrajectories {
+      long api_version;
+
+      sequence<double> time_trajectory;
+
+      sequence<ocs2_ros2_msgs::msg::MpcState> state_trajectory;
+
+      sequence<ocs2_ros2_msgs::msg::MpcInput> input_trajectory;
+    };
+  };
+};

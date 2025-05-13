@@ -1,0 +1,23 @@
+#include <ocs2_ros2_msgs/msg/BezierSegment.idl>
+
+
+module ocs2_ros2_msgs {
+  module msg {
+
+    /**
+    * BezierTrajectory definition
+    *
+    */
+    @TypeCode(type = "ocs2_ros2_msgs::msg::dds_::BezierTrajectory_")
+    struct BezierTrajectory {
+
+      /**
+      * Trajectory of Bezier Segments
+      *
+      */
+      sequence<ocs2_ros2_msgs::msg::BezierSegment> trajectory;
+
+    };
+
+  };
+};
