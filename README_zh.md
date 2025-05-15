@@ -103,7 +103,7 @@ source /opt/ros/jazzy/setup.bash
 colcon build
 ```
 
-在~/unitree_ros2/setup.sh中修改ros版本：foxy为jazzy，并**激活环境**，便于后续编译
+在`~/unitree_ros2/setup.sh`与`~/unitree_ros2/setup_local.sh`中修改ros版本：foxy为jazzy，并**激活环境**，便于后续编译
 
 ```bash
 source ~/unitree_ros2/setup.sh \\ 连接机器人实物时运行

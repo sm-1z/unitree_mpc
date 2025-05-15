@@ -102,7 +102,7 @@ source /opt/ros/jazzy/setup.bash
 colcon build
 ```
 
-Modify the ROS version in the `~/unitree_ros2/setup.sh` file from `foxy` to `jazzy` and activate the environment for subsequent compilations:
+Modify the ROS version in the `~/unitree_ros2/setup.sh`与`~/unitree_ros2/setup_local.sh` from `foxy` to `jazzy` and activate the environment for subsequent compilations:
 
 ```bash
 source ~/unitree_ros2/setup.sh  # Run when connecting to the physical robot
