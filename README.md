@@ -217,12 +217,32 @@ make launch-wb-g1-dummy-sim
 Run mujoco
 
 ```bash
+source ~/unitree_ros2/setup_local.sh
 source ~/unitree-mpc/install/setup.bash
 cd ~/unitree-mpc/src/unitree_mujoco/simulate/build
 ./unitree_mujoco
 ```
 
+or
 
+```bash
+source ~/unitree-mpc/source_unitree.sh
+# echo "source ~/unitree_ros2/setup_local.sh" >> ~/.bashrc
+# echo "source ~/unitree-mpc/install/setup.bash" >> ~/.bashrc
+cd ~/unitree-mpc/src/unitree_mujoco/simulate/build
+./unitree_mujoco
+```
+
+For **rviz and mujoco connection simulation**:
+
+1. launch mujoco
+2. launch real-test
+
+```bash
+export ROS_DOMAIN_ID=1
+cd ~/unitree-mpc/src/wb_humanoid_mpc/
+make launch-wb-g1-real-test
+```
 
 ## References
 
